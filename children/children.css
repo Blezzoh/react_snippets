@@ -1,0 +1,9 @@
+.myImgs{
+  height: 300px;
+  border-radius: 3px;
+  border: 1px solid #BADA55;
+}
+.wrap{
+  margin-right: 20px;
+  float:left;
+}
