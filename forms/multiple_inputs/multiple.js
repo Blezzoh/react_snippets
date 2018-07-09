@@ -4,18 +4,21 @@ class FormExample extends React.Component{
     super(props);
     this.state ={
       favoriteSport: "Baskteball",
-      age: 0
+      age: "", 
+      isActive: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
   
   handleSubmit(event){
-    alert("sport: " + this.state.favoriteSport + "\nage: " + this.state.age );
+    let active = this.state.isActive ? "yes" : "no";
+    alert("sport: " + this.state.favoriteSport + "\nage: " + this.state.age + "\nstill active? " + active);
     event.preventDefault();
   }
   handleChange(event){
-    this.setState( {[event.target.name] : event.target.value});
+    const value = event.target.type === "checkbox" ? event.target.checked : event.target.value ;
+    this.setState( {[event.target.name] : value});
   }
   render(){
     return (
@@ -34,6 +37,12 @@ class FormExample extends React.Component{
           age:
           <input name="age" type="number" value={this.state.age} onChange = {this.handleChange} />
         </label>
+        <pre></pre>
+        <label>
+          still active?: 
+          <input type= "checkbox" name="isActive" checked = {this.state.isActive}  onChange = {this.handleChange}/>
+        </label> 
+        <pre></pre>
         <label>
           <input type="submit" value="submit" />
         </label>
