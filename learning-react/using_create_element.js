@@ -17,4 +17,4 @@ var list = React.createElement("ul", {className: "ingredients"}, items.map(
 var header = React.createElement("h1", {id: "title", className:"title"}, "Baked Salmon");
 var dish = React.createElement("section", {className: "salmon"}, header, list);
 
-export default dish;
+ReactDOM.render("hi", document.getElementById('root'));
