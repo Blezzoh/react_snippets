@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.list-item{
+  list-style: none;
+}
+#main-container{
+  margin-left: 25px;
+  padding: 10px;
+}
