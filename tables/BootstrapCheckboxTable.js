@@ -1,4 +1,4 @@
-export default class ArBootrapTableCheckable extends Component{
+export default class CheckableTable extends Component{
     constructor(props){
         super(props)
         this.state ={
